@@ -12,6 +12,6 @@ Automatic ESU activation based on Microsoft Activation Scripts. Extended Windows
 4. That's it... You'll now have extended support until at least 2028 and up to 2031.
 P.S. The program will not only activate ESU, but also change the region to a supported one (USA).
 
-The author does not claim copyright to the original development. He only made minor changes to the current version to automatically activate ESU without any user interaction.
+The author does not claim copyright on the original development. He only made minor changes to the current version to automatically activate ESU without user input.
 
 
