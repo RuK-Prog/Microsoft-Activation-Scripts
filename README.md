@@ -1,7 +1,7 @@
 Автоматическая активация ESU на основе Microsoft-Activation-Scripts. Дополнительная поддержка Windows 10 на 6 лет после 14 октября 2025 года.
-1.Скачайте файл MAS_AVTO_ESU_6Y.cmd на компьтер с ОС Windows 10.
-2.Откройте файл и ждите появление окна об успешной активации.
-3.Всё... Теперь у вас будет расширенная поддержка до 2028 года минимум и 2031 максимум... 
+1. Скачайте файл MAS_AVTO_ESU_6Y.cmd на компьтер с ОС Windows 10.
+2. Откройте файл и ждите появление окна об успешной активации.
+3. Всё... Теперь у вас будет расширенная поддержка до 2028 года минимум и 2031 максимум... 
 P.S. Программа не только активирует ESU, но и сменит регион на поддерживаемый (США).
 
 Automatic ESU activation based on Microsoft Activation Scripts. Extended Windows 10 support for 6 years after October 14, 2025.
@@ -11,3 +11,4 @@ Automatic ESU activation based on Microsoft Activation Scripts. Extended Windows
 P.S. The program will not only activate ESU, but also change the region to a supported one (USA).
 
 The author does not claim copyright to the original development. He only made minor changes to the current version to automatically activate ESU without any user interaction.
+
