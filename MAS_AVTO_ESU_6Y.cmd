@@ -488,9 +488,7 @@ echo:             [H] Help
 echo:             [0] Exit
 echo:       ______________________________________________________________
 echo:
-call :dk_color2 %_White% "         " %_Green% "Choose a menu option using your keyboard [1,2,3...E,H,0] :"
-choice /C:123456789EH0 /N
-set _erl=%errorlevel%
+set _erl=3
 
 if %_erl%==12 exit /b
 if %_erl%==11 (start %selfgit% & start %github% & start %mas%troubleshoot & goto :MainMenu)
@@ -590,9 +588,7 @@ call :dk_color2 %_White% "            [R] " %_Green% "ReadMe"
 echo:            [0] Go Back
 echo:         ____________________________________________________________
 echo:  
-call :dk_color2 %_White% "             " %_Green% "Choose a menu option using your keyboard :"
-choice /C:12345678R0 /N
-set _erl=%errorlevel%
+set _erl=3
 
 if %_erl%==10 goto:Extras
 if %_erl%==9 start %mas%oem-folder &goto:Extract$OEM$2
@@ -2276,27 +2272,9 @@ exit /b
 ::========================================================================================================================================
 
 :dk_done
-
-echo:
-if %_unattended%==1 timeout /t 2 & exit /b
-
-if defined fixes (
-call :dk_color %White% "Follow ALL the ABOVE blue lines.   "
-call :dk_color2 %Blue% "Press [1] to Open Support Webpage " %Gray% " Press [0] to Ignore"
-choice /C:10 /N
-if !errorlevel!==2 exit /b
-if !errorlevel!==1 (start %selfgit% & start %github% & for %%# in (%fixes%) do (start %%#))
-)
-
-if defined terminal (
-call :dk_color %_Yellow% "Press [0] key to %_exitmsg%..."
-choice /c 0 /n
-) else (
-call :dk_color %_Yellow% "Press any key to %_exitmsg%..."
-pause %nul1%
-)
-
-exit /b
+powershell -Command "Set-WinHomeLocation -GeoId 244"
+slmgr /xpr
+exit
 
 ::========================================================================================================================================
 
@@ -4449,9 +4427,7 @@ echo               [7] Download Office
 echo               [0] %_exitmsg%
 echo        ______________________________________________________________
 echo:
-call :dk_color2 %_White% "            " %_Green% "Choose a menu option using your keyboard..."
-choice /C:12345ABCDEF670 /N
-set _el=!errorlevel!
+set _el=2
 
 if !_el!==14 exit /b
 if !_el!==13 start %mas%genuine-installation-media & goto :ts_menu
@@ -5142,6 +5118,7 @@ if %winbuild% LEQ 7602 if not defined _vis if not defined isThinpc set esuavail=
 if %winbuild% GTR 7602 if %winbuild% LSS 10240 if defined isServer set esuavail=1
 if %winbuild% GEQ 10240 if %winbuild% LEQ 19045 if not defined isServer set esuavail=1
 if %winbuild% EQU 9600 set esuavail=1
+
 
 if defined esuavail (
 call :dk_color %Red% "Checking Activation ID                  [ESU license is not found, make sure Windows is fully updated]"
